@@ -6,4 +6,5 @@ export interface Product {
     selling_price:number;
     purchase_price:number;
     current_stock:number;
+    unit: string;
 }
