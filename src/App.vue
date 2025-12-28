@@ -21,6 +21,7 @@ onMounted(() => {
 </script>
 
 <template>
+  <UApp>
   <div class="app-container">
     
     <main class="main-content">
@@ -28,6 +29,7 @@ onMounted(() => {
     </main>
     <Navbar />
   </div>
+  </UApp>
 </template>
 
 <style scoped>

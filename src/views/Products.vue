@@ -17,6 +17,7 @@ onMounted(async () => {
         <header class="w-full border-b-2 border-steak-900 bg-white sticky top-0 z-10">
             <h1 class="text-steak-600 text-2xl font-bold p-4">PRODUCTOS</h1>
         </header>
+       
 
         <!-- Loading State -->
         <div v-if="loading" class="flex items-center justify-center h-96">

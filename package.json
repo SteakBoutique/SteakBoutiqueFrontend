@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@nuxt/ui": "^4.3.0",
     "@supabase/supabase-js": "^2.80.0",
     "@tailwindcss/vite": "^4.1.18",
     "pinia": "^3.0.4",
