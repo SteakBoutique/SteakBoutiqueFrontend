@@ -3,7 +3,7 @@ import { onMounted } from 'vue';
 import { useProducts } from '../../composables/useProducts';
 import { ref, watch } from 'vue';
 import { supabase } from '../../lib/supabaseClient';
-import { useToast } from '@nuxt/ui';
+
 
 const props = defineProps<{
     open: boolean;
@@ -14,7 +14,6 @@ const emit = defineEmits<{
     (e: 'close'): void;
 }>();
 
-const toast = useToast();
 
 
 
@@ -96,12 +95,12 @@ const submitVenta = async () => {
         const { data, error } = await supabase.rpc('registrar_venta', dataToSend);
         if (error) throw error;
         
-        toast.add({
-            title: 'Éxito',
-            description: 'Venta registrada con éxito',
-            color: 'success',
-            duration: 5000,
-        });
+        // toast.add({
+        //     title: 'Éxito',
+        //     description: 'Venta registrada con éxito',
+        //     color: 'success',
+        //     duration: 5000,
+        // });
         emit('close');
 
         return { success: true, ventaId: data };
