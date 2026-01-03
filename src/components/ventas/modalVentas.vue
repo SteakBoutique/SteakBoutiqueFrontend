@@ -3,6 +3,7 @@ import { onMounted } from 'vue';
 import { useProducts } from '../../composables/useProducts';
 import { ref, watch } from 'vue';
 import { supabase } from '../../lib/supabaseClient';
+import { useToast } from '@nuxt/ui';
 
 const props = defineProps<{
     open: boolean;
