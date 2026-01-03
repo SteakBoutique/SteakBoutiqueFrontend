@@ -8,8 +8,7 @@ export default defineConfig({
   plugins: [
     vue(),
     tailwindcss(),
-    ui({
-    }),
+    ui(),
 
   ],
 

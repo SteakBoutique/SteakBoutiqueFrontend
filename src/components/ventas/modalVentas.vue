@@ -4,7 +4,6 @@ import { useProducts } from '../../composables/useProducts';
 import { ref, watch } from 'vue';
 import { supabase } from '../../lib/supabaseClient';
 
-
 const props = defineProps<{
     open: boolean;
     vendedor_id: string;
@@ -14,6 +13,7 @@ const emit = defineEmits<{
     (e: 'close'): void;
 }>();
 
+const toast = useToast();
 
 
 
@@ -95,8 +95,6 @@ const submitVenta = async () => {
         const { data, error } = await supabase.rpc('registrar_venta', dataToSend);
         if (error) throw error;
         
-        console.log("Venta registrada con éxito:", data);
-        const toast = useToast();
         toast.add({
             title: 'Éxito',
             description: 'Venta registrada con éxito',
