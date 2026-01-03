@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import modalVentas from "./../components/ventas/modalVentas.vue"
 import { ref } from "vue";
-import {useAuthStore} from '../stores/auth.js';
+import {useAuthStore} from '../stores/auth';
 
 const authStore = useAuthStore();
 

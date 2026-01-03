@@ -84,7 +84,6 @@ const ventaData = ref({
 
 const submitVenta = async () => {
     try {
-        // Crear un objeto plano sin reactividad
         const dataToSend = {
             p_vendedor_id: ventaData.value.vendedor_id,
             p_precio_envio: ventaData.value.precio_envio,

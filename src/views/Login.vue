@@ -16,7 +16,7 @@ const handleLogin = async () => {
     errorMessage.value = '';
 
     // Esta función valida las credenciales creadas previamente por el administrador
-    const { data, error } = await supabase.auth.signInWithPassword({
+    const {error } = await supabase.auth.signInWithPassword({
       email: email.value,
       password: password.value,
     });

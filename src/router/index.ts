@@ -38,7 +38,7 @@ const router = createRouter({
     routes
 });
 
-router.beforeEach(async (to, from, next) => {
+router.beforeEach(async (to, _from, next) => {
   // 1. Obtenemos la sesión actual directamente de Supabase
   const { data: { session } } = await supabase.auth.getSession()
   

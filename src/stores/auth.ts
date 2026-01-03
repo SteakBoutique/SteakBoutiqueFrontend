@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { supabase } from '../lib/supabaseClient.ts' 
+import { supabase } from '../lib/supabaseClient'
 
 export const useAuthStore = defineStore('auth', {
   state: () => ({
@@ -12,7 +12,7 @@ export const useAuthStore = defineStore('auth', {
       this.session = data.session
       this.user = data.session?.user || null
     },
-    async login(email, password) {
+    async login(email: string, password: string) {
       const { data, error } = await supabase.auth.signInWithPassword({
         email,
         password,
