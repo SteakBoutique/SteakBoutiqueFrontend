@@ -11,6 +11,7 @@ const props = defineProps<{
 }>();
 
 const emit = defineEmits<{
+    (e: 'success'): void;
     (e: 'close'): void;
 }>();
 
@@ -101,7 +102,7 @@ const submitVenta = async () => {
         //     color: 'success',
         //     duration: 5000,
         // });
-        emit('close');
+        emit('success');
 
         return { success: true, ventaId: data };
     } catch (error) {
