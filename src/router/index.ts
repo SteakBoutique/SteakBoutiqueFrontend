@@ -7,7 +7,7 @@ import { supabase } from '../lib/supabaseClient';
 
 const routes = [
     {
-        path: '/login',
+        path: '/',
         name: 'Login',
         component: Login
     },
